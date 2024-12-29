@@ -20,13 +20,23 @@ The following instructions guide you through the installation and flashing proce
 
 This is the webpage for mobile control, developed using the React framework. It depends on Node.js and npm.
 
+- **Development**
+    ```bash
+    # Navigate to the project directory
+    cd nano_view
+    # Install dependencies
+    npm install
+    # Start dev server
+    npm start
+    ```
 Two installation options are provided; if no modifications are necessary, the second option is recommended.
 
 - **Manual Build**
     ```bash
-    # Install dependencies
     # Navigate to the project directory
     cd nano_view
+    # Install dependencies
+    npm install
     # Build
     npm run build
     ```
