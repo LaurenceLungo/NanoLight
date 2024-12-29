@@ -1,14 +1,8 @@
-### Nano Light Astronomical Equatorial Mount
+### Firmware & Control Interface for Nano Light 2 Astronomical Equatorial Mount
 
 **Nano Light** is an open-source DIY equatorial mount project that originated from [here](https://www.bilibili.com/video/BV1gi4y1R7HK?spm_id_from=333.337.search-card.all.click).
 
-This repository contains the code needed for the Nano Light version 2, including the firmware for the control board and the webpage for mobile control.
-
----
-
-### Control Board PCB
-
-Available at [OSHWHub](https://oshwhub.com/Flanker-E/Nano-Light-xing-ye-chi-dao-yi#P1).
+This repository contains the code needed for Nano Light **version 2**, including the firmware for the control board and the webpage for mobile control.
 
 ---
 
