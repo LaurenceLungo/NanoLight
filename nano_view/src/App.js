@@ -357,7 +357,7 @@ class App extends React.Component {
         <div className="card-div">
           <Card>
             <Card.Body>
-              <Card.Title>状态</Card.Title>
+              <Card.Title>狀態</Card.Title>
               <hr/>
               <div>
                 <div className="in-card-part">
@@ -372,7 +372,7 @@ class App extends React.Component {
                     </div>
                   </div>
                   <div>
-                    <h4>运行时长</h4>
+                    <h4>運行時長</h4>
                     <div className="info-pad">
                       <p>{(this.state.status_duration >= 60 ?
                           (Math.floor(this.state.status_duration / 60) + '分') : "")
@@ -443,12 +443,12 @@ class App extends React.Component {
               </div>
               <div className="in-card-btn-group">
                 <Button
-                  onClick={this.handle_start_btn.bind(this)}>{this.state.status_direction === DIRECTION.STOP ? "开始" : "停止"}</Button>
+                  onClick={this.handle_start_btn.bind(this)}>{this.state.status_direction === DIRECTION.STOP ? "開始" : "停止"}</Button>
                 <Button disabled={this.state.status_direction !== DIRECTION.STOP && !this.state.btn_touched}
                         onTouchStart={this.handle_btn_push.bind(this)}
                         onMouseDown={this.handle_btn_push.bind(this)}
                         onTouchEnd={this.handle_btn_release.bind(this)}
-                        onMouseUp={this.handle_btn_release.bind(this)}>点动</Button>
+                        onMouseUp={this.handle_btn_release.bind(this)}>點動</Button>
               </div>
             </Card.Body>
           </Card>
@@ -457,7 +457,7 @@ class App extends React.Component {
                show={this.state.connection && this.state.config_display} keyboard={false}
                onHide={this.close_config.bind(this)}>
           <Modal.Header closeButton>
-            <Modal.Title>设置</Modal.Title>
+            <Modal.Title>設置</Modal.Title>
           </Modal.Header>
           <Modal.Body>
             <Form ref={(el) => {
@@ -466,37 +466,37 @@ class App extends React.Component {
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>SSID</Form.Label>
                 <Form.Control type="text" disabled={!this.state.config_fetched} maxLength={10}
-                              placeholder={this.state.config_fetched ? this.state.config_ssid : "获取中……"}
+                              placeholder={this.state.config_fetched ? this.state.config_ssid : "獲取中..."}
                               onChange={this.handle_config_ssid_change.bind(this)}/>
               </Form.Group>
               <Form.Group className="mb-3" controlId="formBasicPassword">
-                <Form.Label>密码</Form.Label>
+                <Form.Label>密碼</Form.Label>
                 <Form.Control type="text" disabled={!this.state.config_fetched} maxLength={10}
-                              placeholder={this.state.config_fetched ? this.state.config_pwd : "获取中……"}
+                              placeholder={this.state.config_fetched ? this.state.config_pwd : "獲取中..."}
                               onChange={this.handle_config_pwd_change.bind(this)}/>
-                <small className="form-text text-muted">WiFi设置将在重启后生效，SSID与密码最长十位</small>
+                <small className="form-text text-muted">WiFi設定將在重啟後生效，SSID與密碼最長十位</small>
               </Form.Group>
               <Form.Group className="mb-3" controlId="formBasicPassword">
                 <Form.Label>减速比</Form.Label>
                 <Form.Control type="number" disabled={!this.state.config_fetched}
-                              placeholder={this.state.config_fetched ? this.state.config_ratio : "获取中……"}
+                              placeholder={this.state.config_fetched ? this.state.config_ratio : "獲取中..."}
                               onChange={this.handle_config_ratio_change.bind(this)}/>
-                <small className="form-text text-muted">默认减速比为2916，反转减速箱加负号即可；最长十位</small>
+                <small className="form-text text-muted">默認減速比為2916，反轉減速箱加負號即可；最長十位</small>
               </Form.Group>
             </Form>
           </Modal.Body>
           <Modal.Footer>
-            <Button onClick={this.close_config.bind(this)}>关闭</Button>
+            <Button onClick={this.close_config.bind(this)}>關閉</Button>
             <Button onClick={this.handle_config_save.bind(this)}>保存</Button>
           </Modal.Footer>
         </Modal>
         <Modal className={VISUAL_MODE.classname(this.state.visual_mode)} show={!this.state.connection} backdrop="static"
                keyboard={false}>
           <Modal.Header>
-            <Modal.Title>未连接</Modal.Title>
+            <Modal.Title>未連接</Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            等待重连/赤道仪响应……
+            等待重連/赤道儀響應...
           </Modal.Body>
         </Modal>
       </div>

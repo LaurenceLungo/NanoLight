@@ -71,7 +71,7 @@ void setup() {
                             nullptr, 0);
 
     server.begin();
-    dnsServer.start(DNS_PORT, "www.nanolight.cn", apIP);
+    dnsServer.start(DNS_PORT, "nanolight.io", apIP);
 }
 
 void loop() { motor.tick(); }
