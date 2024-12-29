@@ -16,7 +16,7 @@ class VISUAL_MODE {
   static str(mode) {
     switch (mode) {
       case this.DARK:
-        return "红光";
+        return "紅光";
       case this.NORMAL:
         return "正常";
       default:
@@ -45,7 +45,7 @@ class DIR_MODE {
       case this.SKY:
         return "天文";
       case this.TIME_LAPSE:
-        return "延时";
+        return "延時";
       default:
         return "UNKNOWN";
     }
@@ -60,9 +60,9 @@ class DIRECTION {
   static str_clock(direction) {
     switch (direction) {
       case this.POS:
-        return "顺时针";
+        return "順時針";
       case this.NEG:
-        return "逆时针";
+        return "逆時針";
       default:
         return "停止";
     }
@@ -348,7 +348,7 @@ class App extends React.Component {
       <div className={"APP " + VISUAL_MODE.classname(this.state.visual_mode)}>
         <div className="btn-bar">
           <Button className="round_btn" bsSize="large" disabled={this.state.status_direction !== DIRECTION.STOP}
-                  onClick={this.trigger_config.bind(this)}>设置</Button>
+                  onClick={this.trigger_config.bind(this)}>設置</Button>
           <Button bsSize="large"
                   onClick={this.trigger_dir_mode.bind(this)}>{DIR_MODE.str(DIR_MODE.not(this.state.dir_mode))}</Button>
           <Button bsSize="large"
